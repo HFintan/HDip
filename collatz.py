@@ -5,13 +5,19 @@
 # the user's current record for maximum number of steps involved in 
 # reaching 1.
 
+# I left some time between the starting and ending this script, so I cannot
+# remember all of the webpages I consulted trying to get the file reading/writing
+# to work. And it seems "readlines" is generally undesirable, but I could not
+# come up with another succinct way to read the entire line as an integer, rather
+# than just the first character.
+
 while True:
     try:
         your_number = int(input("Please enter an integer greater than 0:"))
     except ValueError:
         print("You're not going to get very far with that. Please enter a whole number greater than 0.")
         continue
-    if your_number < 0:
+    if your_number < 1:
         print("Please a enter a whole number GREATER than 0.")
     else:
         break
@@ -41,14 +47,15 @@ except FileNotFoundError:
     record_file=open("Collatz-record.txt", "w")
     record_file.write(f'{initial_number}\n{step_count}')  
 else:
-    old_record = int(record_file.readline(0))
-    print("record was ", old_record.readline(0))
-    held_by=record_file.readline(1)
-    print(held_by)
-#    if int(record_file.readline(1)) < step_count:
-#        print("Wow! A new record! The old record for the greatest number of steps was ", held_by, " which needed ", old_record, " steps, but you've beaten it!")        
-#        record_file=open('Collatz_record.txt', "w")
-#        record_file.write(f'{initial_number}\n{step_count}')
+    record_file_lines=record_file.readlines()
+    held_by = int(record_file_lines[0])
+    old_record=int(record_file_lines[1])
+    if old_record < step_count:
+        print("Wow! A new record! The old record for the greatest number of steps was", old_record, "steps, held by", held_by, "but you've beaten it, with",initial_number, "which takes a whopping", step_count, "steps!")        
+        record_file=open('Collatz-record.txt', "w")
+        record_file.write(f'{initial_number}\n{step_count}')
+    else: 
+        print("The current record is", old_record, "steps, held by", held_by)
     record_file.close()
 
 

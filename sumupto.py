@@ -18,4 +18,4 @@ while True:
         break
 
 # Fomula uses fewer operations than adding up all the numbers.
-print(your_choice*(your_choice+1)/2)
+print(int(your_choice*(your_choice+1)/2))

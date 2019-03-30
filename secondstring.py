@@ -1,5 +1,9 @@
+# Q6
 # Program takes an input string and outputs every nth word
 # starting with a user-inputted offset
+
+# Used for info on split
+# http://www.pitt.edu/~naraehan/python3/split_join.html
 
 while True:
     try:

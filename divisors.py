@@ -1,3 +1,4 @@
+# Question 3
 # Takes as input an upper and lower bound integer, and returns those
 # integers between them which are divisible by 6 but not 12
 # Takes optional range, rather than range in problem sheet, so

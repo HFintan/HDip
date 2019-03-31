@@ -1,0 +1,8 @@
+These are my solutions to a set of problems for Dr. McLoughlin's programming and scripting course as part of the Higher Diploma in Data Analytics in GMIT. 
+https://github.com/ianmcloughlin/problems-pands-2019
+
+The scripts all do what the problem sheet requires, though some have embellishments, and thus may require a little extra input from the reader. Two of the scripts (primes.py and collatz.py) also create a text file each, for storing records.
+
+The names of the scripts are all as listed on the problem sheet, with the exception of problem 8 (HDip_datetime.py) which could not be called datetime because of a clash, and problem 10 which gave no name corresponds to losing_the_plot.py.
+
+If there are any questions, please email me at fintan[dot]hegarty[at]gmail[dot]com.

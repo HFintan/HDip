@@ -8,13 +8,22 @@
 import math
 
 while True:
-    try:
-        your_number = int(input("Please enter an integer greater than 1:"))
+# FH - removed this afterwards when I realised floats were allowed.
+# Also, was using .sqrt, but it seems that was not desired, so I went
+# with ^0.5 instead.
+#    try:
+#        your_number = int(input("Please enter an integer greater than 1:"))
+#    except ValueError:
+#        print("You're not going to get very far with that. Please enter a whole number greater than 1.")
+#        continue
+#    if your_number < 2:
+#        print("Please a enter a whole number GREATER than 1.")
+#    else:
+#        break
+    try: 
+        your_number = float(input("Please enter a number:"))
     except ValueError:
-        print("You're not going to get very far with that. Please enter a whole number greater than 1.")
-        continue
-    if your_number < 2:
-        print("Please a enter a whole number GREATER than 1.")
+        print("A NUMBER, please!")
     else:
         break
 
@@ -32,5 +41,6 @@ while True:
     else:
         break
 
-print("The square root of",your_number,"is approximately",round(float(math.sqrt(your_number)),your_round))
+#print("The square root of",your_number,"is approximately",round(float(math.sqrt(your_number)),your_round))
+print("The square root of",your_number,"is approximately",round(float((your_number)**0.5),your_round))
 

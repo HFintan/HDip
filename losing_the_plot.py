@@ -1,5 +1,13 @@
 # Problem 10
 
+# Used
+# https://stackoverflow.com/questions/40701961/finding-the-max-value-in-a-two-dimensional-array
+# for finding the max
+# and various plotting pages
+# https://python-graph-gallery.com/122-multiple-lines-chart/
+# https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
+# https://matplotlib.org/tutorials/introductory/pyplot.html
+
 # Ask user for range for x
 while True:
     try:
@@ -39,9 +47,9 @@ min_y_val =min(min(i) for i in [linear,squared,tutu_power])
 max_y_val =max(max(i) for i in [linear,squared,tutu_power]) 
 
 
-plt.plot(range(lower_value,upper_value+1),linear, label='x')
-plt.plot(range(lower_value,upper_value+1),squared, label='x^2')
-plt.plot(range(lower_value,upper_value+1),tutu_power, label='2^x')
+plt.plot(range(lower_value,upper_value+1),linear, marker='o', label='x')
+plt.plot(range(lower_value,upper_value+1),squared, marker='^', label='x^2')
+plt.plot(range(lower_value,upper_value+1),tutu_power, marker='s', label='2^x')
 plt.axis([lower_value,upper_value,min_y_val,max_y_val])
 legend = plt.legend(loc='upper center', fontsize='large')
 

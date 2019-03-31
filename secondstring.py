@@ -37,4 +37,5 @@ while True:
         split_string = your_string.split()
         for i in range(your_offset,len(split_string),your_increment):
             print(split_string[i], end=' ')
+        print('\n')
         break

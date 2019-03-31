@@ -62,7 +62,7 @@ while lower_bound <= upper_bound:
 
 #Method 2B (uses the increment from the range function)
 for i in range(lower_bound, upper_bound, 12):
-    print(i, end = ', ')
+    print(i, end = '\n')
 # End Method 2B
 # End Method 2
 

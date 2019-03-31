@@ -17,5 +17,5 @@ while True:
     else:
         break
 
-# Fomula uses fewer operations than adding up all the numbers.
+# Fomula uses fewer operations than adding up all the numbers, and is waaay faster.
 print(int(your_choice*(your_choice+1)/2))
